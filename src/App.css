@@ -1,24 +1,8 @@
-.App{
-    width: 50%;
-    margin: 100px auto;
-    border: 3px dotted green;
-    border-radius: 20px;
-    padding: 25px;
-}
-
-.App h1{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 25px;
-    color: darkgreen;
-    text-align: center;
-    line-height: 40px;
-}
-
-.App p{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 19px;
-    font-style: italic;
-    color: forestgreen;
-    text-align: center;
-    line-height: 40px;
+:root{
+    --PrimColorYellow: #F4CE14;
+    --PrimColorTow: #495E57;
+    --secColor: #EE9972;
+    --secColorTow: #FBDABB;
+    --secColorthree: #EDEFEE;
+    --secColorFour: #333333;
 }

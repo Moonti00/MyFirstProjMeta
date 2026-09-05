@@ -1,13 +1,17 @@
-
-import './App.css'
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
+import './index.css';
+import './App.css';
 
 function App() {
 
   return (
-    <div className="App">
-      <h1>Welcome to My App</h1>
-      <p>This is a simple React application.</p>
-    </div>
+    <>
+    <Header />
+    <Main />
+    <Footer />
+    </>
   )
 }
 
