@@ -5,4 +5,130 @@
     --secColorTow: #FBDABB;
     --secColorthree: #EDEFEE;
     --secColorFour: #333333;
+
+    --widthAll: 75%;
+}
+
+@media (max-width: 780px) {
+    :root{
+        --widthAll: 100%
+    }
+}
+
+/* -------------------- */
+
+.hidden{
+    display: none;
+}
+
+/* -------------------- */
+
+/* start header */
+
+header{
+    width: var(--widthAll);
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    padding: 20px 30px;
+}
+
+header .logo{
+    width: 150px;
+    height: auto;
+}
+
+.humIcon{
+    display: none;
+    cursor: pointer;
+}
+
+
+header nav ul{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+header nav ul li{
+    list-style: none;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: var(--PrimColorTow);
+    font-weight: 900;
+    transition: all 1.3s ease;
+}
+
+header nav ul li a:hover{
+    border-bottom: 2px solid var(--PrimColorYellow);
+    color: var(--secColorFour);
+}
+
+/* start the header Hidden */
+
+.header{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    background-color: var(--PrimColorTow);
+}
+.header img{
+    position: relative;
+    top: 40px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header nav ul li{
+    list-style: none;
+    margin-top: 40px;
+}
+
+.header nav ul li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--secColorTow);
+    font-weight: 900;
+    transition: 1.3s all ease;
+}
+
+.header nav ul li a:hover{
+    border-bottom: 2px solid var(--secColorTow);
+    color: var(--PrimColorYellow);
+}
+
+/* done the header Hidden */
+
+
+/* done the header */
+
+
+
+
+
+
+
+@media (max-width: 980px) {
+    header{
+        justify-content: space-between;
+    }
+    header nav{
+        display: none;
+    }
+    .humIcon{
+        display: initial;
+    }
 }

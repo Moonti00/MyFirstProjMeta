@@ -2,16 +2,20 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    transition: all 0.3s ease-in-out;
 }
 
 html{
-    font-size: 62.5%;
     scroll-behavior: smooth;
     line-height: 1.5;
+    font-size: 16px;
 }
 
 body{
     font-family: 'Karla', sans-serif;
     background-color: #EDEFEE;
+}
+
+img{
+    max-width: 200px;
+    display: block;
 }
