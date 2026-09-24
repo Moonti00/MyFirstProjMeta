@@ -27,16 +27,26 @@ function SectionTow() {
     }
   ];
 const specialItems = specials.map((item) => (
-  <div key={item.id}>
-    <img src={item.img} alt={item.title} />
-    <div>
+  <div key={item.id} className={"cardSecTow"}>
+    <img src={item.img} alt={item.title} className='imgCardSecTow' />
+    <div style={{
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      padding: "0px 15px"
+    }}>
       <h2>{item.title}</h2>
       <p>{item.price}</p>
     </div>
-    <p>{item.description}</p>
-    <div>
-      <Link to="/Reservations">
-        <a>Order a delivery</a>
+    <p style={{padding: "0px 15px"}} className='disSecTow'>{item.description}</p>
+    <div style={{
+      padding: "0px 15px",
+      paddingBottom: "15px",
+      display: "flex",
+      alignItems: "center",
+      }}>
+      <Link className={"buttonSecTow"} to="/Reservations">
+        Order a delivery
       </Link>
       <img src={iconSecTow} alt="Icon" />
     </div>
@@ -44,15 +54,15 @@ const specialItems = specials.map((item) => (
 ));
 
 return (
-  <section>
+  <section className={"secTow"}>
+    <div className={"titleSecTow"}>
+      <h1>This Weeks Specials!</h1>
+      <button className={"button"}>Online Menu</button>
+    </div>
     <div>
-      <h1>This Weeks Specials</h1>
-      <button>Online Menu</button>
-      </div>
-      <div>
-        <p>Check out our special offers for this week!</p>
-      </div>
-      <div>
+        <p className={"paraghSecTow"}>Check out our special offers for this week!</p>
+     </div>
+      <div className={"contCardsSecTow"}>
         {specialItems}
       </div>
     </section>

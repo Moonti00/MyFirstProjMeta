@@ -2,16 +2,38 @@ import logo from '../../public/logo.svg';
 import cross from '../../public/icon/cross.png';
 import { Link } from 'react-router-dom';
 import humb from '../../public/icon/hamburger.svg';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 function Header() {
 
   const [hiding, setHiding] = useState(false);
+  const scrollNow = useRef(0);
+  const lastScroll = useRef(0);
+  const [hideScroll, setHideScroll] = useState(false)
+  useEffect(() => {
+
+    const scrollAction = () => {
+      scrollNow.current = window.scrollY;
+      if(scrollNow.current > lastScroll.current){
+        setHideScroll(true);
+      }else if(scrollNow.current <= lastScroll.current){
+        setHideScroll(false);
+      }
+      lastScroll.current = scrollNow.current;
+    }
 
 
+
+    window.addEventListener("scroll", scrollAction);
+
+
+    return () => {
+      window.removeEventListener("scroll", scrollAction);
+    }
+  },[])
   return (
     <>
-    <header>
+    <header style={{top: hideScroll ? "-100%" : "0"}}>
       <img src={logo} alt="Logo" className={"logo"} />
       <nav>
         <ul>

@@ -1,6 +1,23 @@
+import "./Res.css";
+
+
+function Result() {
+    return (
+        <div className="result">
+        <h3>Your Reservation</h3>
+        <hr />
+        <p><span>Name:</span> Moonti Magdab</p>
+        <p><span>Date:</span> 2026-9-6</p>
+        <p><span>Time:</span> 17:30</p>
+        <p><span>Guests:</span> 3</p>
+        <p><span>Occasion:</span> Birthday</p>
+        </div>
+    )
+}
+
 function Reservations() {
     return (
-        <div>
+        <div className="contForm">
             <h1>Book Your Reservations</h1>
             <form>
                 <label htmlFor="firstName">First Name<span style={{color: "red"}}>*</span>:</label>
@@ -27,9 +44,16 @@ function Reservations() {
                     <option value="anniversary">Anniversary</option>
                 </select>
                 <br />
-                <button type="submit">Create Reservation</button>
+                <button type="submit" className="buttonForm">Create Reservation</button>
             </form>
-
+            <div className="contResult">
+                <Result />
+                <Result />
+                <Result />
+                <Result />
+                <Result />
+                <Result />
+            </div>
         </div>
     )
 

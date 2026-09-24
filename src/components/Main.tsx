@@ -6,7 +6,7 @@ import SectionTow from "./SectionTow";
 function Main() {
 
   return (
-    <main>
+    <main style={{paddingTop: "85px"}}>
         <SectionOne />
         <SectionTow />
         <SectionThree />

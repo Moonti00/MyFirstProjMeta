@@ -5,9 +5,17 @@
     --secColorTow: #FBDABB;
     --secColorthree: #EDEFEE;
     --secColorFour: #333333;
-
+    --colorBlueLow: #d7eaf5;
     --widthAll: 75%;
 }
+
+
+img{
+    max-width: 200px;
+    display: block;
+}
+
+
 
 @media (max-width: 780px) {
     :root{
@@ -21,6 +29,21 @@
     display: none;
 }
 
+.button{
+    padding: 17px 32px;
+    background-color: var(--PrimColorYellow);
+    color: var(--secColorFour);
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+
+
+
 /* -------------------- */
 
 /* start header */
@@ -32,6 +55,13 @@ header{
     align-items: center;
     gap: 150px;
     padding: 20px 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--secColorthree);
+    transition: 1.5s all ease;
+    z-index: 4;
 }
 
 header .logo{
@@ -72,7 +102,7 @@ header nav ul li a:hover{
 .header{
     width: 100%;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -110,14 +140,365 @@ header nav ul li a:hover{
     color: var(--PrimColorYellow);
 }
 
-/* done the header Hidden */
+/* end the header Hidden */
 
 
-/* done the header */
+/* end the header */
+
+
+/* start section one */
+
+.secOne{
+    background-color: var(--PrimColorTow);
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.insideSecOne{
+    width: 350px;
+    padding: 40px 0px;
+}
+
+.insideSecOne div{
+    padding: 35px 0px;
+}
+
+.insideSecOne div h1{
+    font-size: 3.6rem;
+    margin: -18px 0px;
+    color: var(--PrimColorYellow);
+}
+.insideSecOne p{
+    color: var(--secColorthree);
+    font-weight: 900;
+}
+
+.insideSecOne div p{
+    font-size: 2rem;
+}
+
+.insideSecOne div + p{
+    font-size: 1.3rem;
+}
+
+.insideSecOne .button{
+    margin-top: 30px;
+}
+
+.secOne img{
+    min-width: 400px;
+    max-height: 400px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 70px;
+
+}
+
+/* end section one */
+
+
+/* start section tow */
+
+.secTow{
+    width: var(--widthAll);
+    margin: 0px auto;
+    padding-top: 80px;
+}
+.secTow .titleSecTow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    flex-wrap: wrap;
+}
+
+.secTow .titleSecTow h1{
+    font-size: 3rem;
+    color: var(--secColorFour);
+}
+
+.paraghSecTow{
+    font-size: 1.3rem;
+    background-color: var(--secColorTow);
+    color: var(--secColorFour);
+    text-align: center;
+    padding: 5px 0px;
+}
+
+.contCardsSecTow{
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cardSecTow{
+    width: 280px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.cardSecTow .imgCardSecTow{
+    min-width: 100%;
+    height: auto;
+    max-height: 180px;
+}
+
+.cardSecTow div h2{
+    color: var(--secColorFour);
+}
+
+.cardSecTow div p{
+    color: var(--secColor);
+}
+
+.disSecTow{
+    color: var(--PrimColorTow);
+    padding: 10px;
+}
+
+.buttonSecTow{
+    text-decoration: none;
+    color: var(--secColorFour);
+    border-bottom: 2px solid var(--PrimColorYellow);
+    margin-right: 8px;
+}
+
+/* end section tow */
+
+
+
+/* start section three */
+
+.secThree{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: var(--widthAll);
+    margin: 0px auto;
+}
+.secThree > h2{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--secColorFour);
+}
+
+.contSecThree{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.cardSecThree{
+    width: 190px;
+    height: 200px;
+    padding: 25px 15px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    transition: all 0.2s linear;
+}
+
+.cardSecThree:hover{
+    transform: scale(1.1);
+}
+
+.cardSecThree > div{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+.cardSecThree > div img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.cardSecThree > div div h3{
+    font-size: 1rem;
+    color: var(--secColorFour);
+}
+.cardSecThree > div div p{
+    font-size: 0.8rem;
+    color: var(--PrimColorTow);
+    font-style: italic;
+}
+.stars{
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0px;
+}
+.stars img{
+    display: block;
+   width: 10%;
+   min-width: 18px;
+   max-width: 18px;
+   height: 18px;
+   min-height: 18px;
+   max-height: 18px;
+}
+
+.stars + p{
+    font-size: 0.9rem;
+    color: var(--PrimColorTow);
+}
+/* end section three */
 
 
 
 
+/* start last section  */
+
+#about{
+    width: 100%;
+    background-color: var(--colorBlueLow);
+    padding: 80px 25px 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+
+.insideLast{
+    max-width: 470px;
+}
+
+.insideLast h1{
+    font-size: 3rem;
+    color: var(--PrimColorTow);
+}
+.insideLast h3{
+    font-size: 1.8rem;
+    color: var(--secColor);
+    margin-top: -20px;
+}
+.insideLast p{
+    padding-top: 26px;
+    color: var(--PrimColorTow);
+    font-size: 1.3rem;
+}
+
+
+.contImgLast{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: -200px;
+}
+.contImgLast img{
+    min-width: 300px;
+    min-height: 350px;
+    object-fit: cover;
+    border-radius: 23px;
+    transition: 0.4s all linear;
+}
+
+.imgOneLast{
+    translate: 100px 100px;
+}
+
+.imgOneLast:hover{
+    scale: 1.08;
+    rotate: 8deg;
+    z-index: 3;
+}
+.imgTowLast:hover{
+    scale: 1.08;
+    rotate: -8deg;
+    z-index: 3;
+}
+
+
+/* start last sectionTow */
+
+.lastSec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    background-color: var(--colorBlueLow);
+    padding-bottom: 80px;
+}
+
+.lastSec img{
+    min-width: 280px;
+    height: auto;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+/* end last sectionTow */
+/* end last section */
+
+
+
+
+/* start footer */
+
+
+.contFooter{
+    width: 100%;
+    background-color: var(--colorBlueLow);
+    border-top: 2px solid var(--PrimColorYellow);
+    padding: 80px 30px;
+}
+footer *{
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.footerO{
+    width: var(--widthAll);
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+.footerO img{
+    max-width: 80px;
+    min-height: auto;
+}
+
+.footerO li *{
+    text-decoration: none;
+    color: var(--secColorFour);
+    font-weight: 300;
+}
+.footerO li{
+    list-style: none;
+}
+
+
+
+.footerT{
+    padding-top: 40px;
+}
+.footerT p{
+    text-align: center;
+    color: var(--PrimColorTow);
+    font-style: italic;
+}
+
+/* end footer */
 
 
 
@@ -130,5 +511,20 @@ header nav ul li a:hover{
     }
     .humIcon{
         display: initial;
+    }
+    .secOne img{
+        display: none;
+    }
+    .contImgLast{
+        padding-right: 80px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .contImgLast img{
+        min-width: 240px;
+        min-height: 270px;
+    }
+    .imgTowLast{
+        translate: -20px -20px;
     }
 }

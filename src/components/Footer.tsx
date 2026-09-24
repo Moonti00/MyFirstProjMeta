@@ -4,8 +4,8 @@ import logofoot from '../../public/img/logofoot.png';
 function Footer() {
 
   return (
-    <footer>
-      <footer>
+    <footer className='contFooter'>
+      <footer className='footerO'>
           <img src={logofoot} alt="Logo" />
           <nav>
             <h3>Doormat navigation</h3>
@@ -39,7 +39,7 @@ function Footer() {
             </ul>
           </nav>
       </footer>
-      <footer>
+      <footer className='footerT'>
         <p>&copy; 2026 Little Lemon, All rights reserved.</p>
       </footer>
       </footer>

@@ -33,27 +33,29 @@ function SectionThree() {
   ]
 
   return (
-    <section>
+    <section className={"secThree"}>
+      <h2>What do our customers think?</h2>
+      <div className={"contSecThree"}>
       {sectionThree.map((item, index) => (
-        <div key={index}>
+        <div key={index} className={"cardSecThree"}>
           <div>
-          <img src={item.img} alt={item.name} />
-          <div>
-          <h3>{item.name}</h3>
-          <p>{item.userName}</p>
+            <img src={item.img} alt={item.name} />
+            <div>
+              <h3>{item.name}</h3>
+              <p>{item.userName}</p>
+            </div>
           </div>
-          </div>
-          <div className="flex items-center gap-1">
+          <div className="stars">
             <img src={star} alt="Star"/>
             <img src={star} alt="Star"/>
             <img src={star} alt="Star"/>
             <img src={star} alt="Star"/>
             <img src={star} alt="Star"/>
           </div>
-          <p className="text-center">{item.description}</p>
+          <p className="text-center">"{item.description}"</p>
         </div>
       ))}
-
+    </div>
     </section>
   )
 }
