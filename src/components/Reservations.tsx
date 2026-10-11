@@ -128,21 +128,21 @@ useEffect(() => {
                 setSubmit(true);
             }}>
                 <label htmlFor="firstName">First Name<span style={{color: "red"}}>*</span>:</label>
-                <input type="text" id="firstName" name="firstName" required onChange={(e) => setFirstName(e.target.value)} value={firstName} />
-                <label htmlFor="lastName">Last Name<span style={{color: "red"}}>*</span>:</label>
-                <input type="text" id="lastName" name="lastName" required onChange={(e) => setLastName(e.target.value)} value={lastName}/>
+                <input aria-label="First Name" type="text" id="firstName" name="firstName" required onChange={(e) => setFirstName(e.target.value)} value={firstName} />
+                <label aria-label="Last Name" htmlFor="lastName">Last Name<span style={{color: "red"}}>*</span>:</label>
+                <input aria-label="Last Name" type="text" id="lastName" name="lastName" required onChange={(e) => setLastName(e.target.value)} value={lastName}/>
                 <br />
                 <label htmlFor="phone">Phone<span style={{color: "red"}}>*</span>:</label>
-                <input type="tel" id="phone" name="phone" required onChange={(e) => setPhone(e.target.value)} value={phone}/>
+                <input aria-label="Phone" type="tel" id="phone" name="phone" required onChange={(e) => setPhone(e.target.value)} value={phone}/>
                 <br />
                 <label htmlFor="date">Choose Date<span style={{color: "red"}}>*</span>:</label>
-                <input type="date" id="date" name="date" required onChange={(e) => setDate(e.target.value)} value={date}/>
+                <input aria-label="Date" type="date" id="date" name="date" required onChange={(e) => setDate(e.target.value)} value={date}/>
               {currentMode ? <p style={{color:"red"}}>Date must be today or in the future.</p> : null}
                 {errorSubmit ? <p style={{color:"red"}}>This date and time are already taken.</p> : null}
 
                 <br />
                 <label htmlFor="time">Choose Time<span style={{color: "red"}}>*</span>:</label>
-                   <select id="time " onChange={(e) => setTime(e.target.value)} value={time}>
+                   <select aria-label="Time" id="time " onChange={(e) => setTime(e.target.value)} value={time}>
                          <option value={"17:00"}>17:00</option>
                          <option value={"18:00"}>18:00</option>
                          <option value={"19:00"}>19:00</option>
@@ -152,16 +152,16 @@ useEffect(() => {
                     </select>
                 <br />
                 <label htmlFor="guests">Number of Guests<span style={{color: "red"}}>*</span>:</label>
-                <input type="number" id="guests" name="guests" min="1" max="10" required onChange={(e) => setGuests(e.target.value)} value={guests}/>
+                <input aria-label="Number of Guests" type="number" id="guests" name="guests" min="1" max="10" required onChange={(e) => setGuests(e.target.value)} value={guests}/>
                 <br />
                 <label htmlFor="occasion">Occasion:</label>
-                <select id="occasion" name="occasion" onChange={(e) => setOccasion(e.target.value)} value={occasion}>
+                <select aria-label="Occasion" id="occasion" name="occasion" onChange={(e) => setOccasion(e.target.value)} value={occasion}>
                     <option value="birthday">Birthday</option>
                     <option value="engagement">Engagement</option>
                     <option value="anniversary">Anniversary</option>
                 </select>
                 <br />
-                <button data-testid="submit-button" type="submit" className="buttonForm" disabled={disabled || currentMode}>
+                <button aria-label="Create Reservation" type="submit" className="buttonForm" disabled={disabled || currentMode}>
                     Create Reservation
                 </button>
             </form>
