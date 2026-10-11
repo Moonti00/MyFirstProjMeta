@@ -63,7 +63,11 @@ input, select{
     font-size: 1rem;
     cursor: pointer;
 }
-
+.buttonForm:disabled{
+    background-color: var(--secColorTow);
+    color: var(--secColorFour);
+    cursor: not-allowed;
+}
 /* start result */
 
 
@@ -74,6 +78,10 @@ input, select{
     padding: 20px;
     border: 1px solid var(--secColor);
     border-radius: 20px;
+    transition: all 0.5s ease-in;
+}
+.result:hover{
+    scale: 1.1;
 }
 .result h3{
     font-size: 2rem;
@@ -85,7 +93,6 @@ input, select{
 }
 .result p span{
     color: var(--PrimColorTow);
-    
 }
 
 /* end result */
@@ -96,5 +103,8 @@ input, select{
 @media (max-width: 780px) {
     :root{
         --widthAll: 100%
+    }
+    form{
+        width: 360px;
     }
 }

@@ -37,7 +37,7 @@ function Header() {
       <img src={logo} alt="Logo" className={"logo"} />
       <nav>
         <ul>
-            <li> <a href="/">Home</a> </li>
+            <li> <Link to="/">Home</Link> </li>
             <li> <a href="/#about">About</a> </li>
             <li> <a href="/">Menu</a> </li>
             <li> <Link to="/Reservations">Reservations</Link> </li>

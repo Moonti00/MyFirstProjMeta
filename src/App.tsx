@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import './index.css';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Reservations from './components/Reservations';
+import BookingPage from './components/Reservations';
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
     <Header />
     <Routes>
       <Route path="/" element={<Main />} />
-      <Route path="/Reservations" element={<Reservations />} />
+      <Route path="/Reservations" element={<BookingPage />} />
     </Routes>
     <Footer />
     </>

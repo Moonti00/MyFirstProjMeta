@@ -46,7 +46,7 @@ const specialItems = specials.map((item) => (
       alignItems: "center",
       }}>
       <Link className={"buttonSecTow"} to="/Reservations">
-        Order a delivery
+        Book a table
       </Link>
       <img src={iconSecTow} alt="Icon" />
     </div>
