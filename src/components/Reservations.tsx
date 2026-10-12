@@ -4,6 +4,9 @@ import "./Res.css";
 
 
 function ConfirmedBooking ({dataArr, setSubmit}) {
+    // this component is for showing the confirmation of the booking after submit the form
+    // if the date and time is already used then show the error message
+    // if the date and time is not used then show the confirmation message
     if (dataArr[dataArr.length - 1].errorSubmitData) {
         return (
             <div className="contConfirmedBooking">
@@ -27,7 +30,7 @@ function ConfirmedBooking ({dataArr, setSubmit}) {
 }
 
 function Result({dataArr}) {
-
+// this component is for showing the result of the booking after submit the form and if the date and time is not already used
     const data = dataArr.map((el) => {
         if (el.errorSubmitData) {
             return (<>{null}</>)
@@ -56,7 +59,8 @@ function Result({dataArr}) {
 
 function BookingPage() {
 
-
+    // states for the form inputs
+    // Start
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [phone, setPhone] = useState("");
@@ -64,15 +68,17 @@ function BookingPage() {
     const [time, setTime] = useState("17:00");
     const [guests, setGuests] = useState("");
     const [occasion, setOccasion] = useState("birthday");
+    // End
+    const [disabled, setDisabled] = useState(false); // state for button submit to disabled
 
-    const [disabled, setDisabled] = useState(false);
-
-    const [arrData, setArrData] = useState([]);
-    const [errorSubmit, setErrorSubmit] = useState(false);
+    const [arrData, setArrData] = useState([]); // sate for Data coming from input
+    const [errorSubmit, setErrorSubmit] = useState(false); // state for error coming from after sumbit the form when date and time already used
 
 
-    const [submit, setSubmit] = useState(false);
+    const [submit, setSubmit] = useState(false); // state for success submit form and show the confirmation message
 
+    //  is not success when choose the same date and time already used
+    // Start
     const [currentMode, setCurrentMode] = useState(false);
     const dateNow =  Date.now();
     const dateinForm = Date.parse(date);
@@ -83,7 +89,10 @@ useEffect(() => {
         setCurrentMode(false);
     }
 }, [date]);
+    // End
 
+    // button when is not disabled
+    // Start
 useEffect(() => {
     if (firstName && lastName && phone && date && time && guests) {
         setDisabled(false);
@@ -91,7 +100,10 @@ useEffect(() => {
         setDisabled(true);
     }
 }, [firstName, lastName, phone, date, time, guests]);
+    // End
 
+    // date and time is already used so error state is true
+    // Start
 useEffect(() => {
     const theSameDateAndTime = arrData.some((el) => el.dateData === date && el.timeData === time);
     if (theSameDateAndTime) {
@@ -100,7 +112,7 @@ useEffect(() => {
         setErrorSubmit(false);
     }
 }, [arrData, date, time]);
-
+    // End
 
 
         return (

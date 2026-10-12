@@ -6,12 +6,13 @@ import { useState, useRef, useEffect } from 'react';
 
 function Header() {
 
+  // This code makes the header to disappear while going down the page and appear when going up the pag
+  // Start
   const [hiding, setHiding] = useState(false);
   const scrollNow = useRef(0);
   const lastScroll = useRef(0);
-  const [hideScroll, setHideScroll] = useState(false)
+  const [hideScroll, setHideScroll] = useState(false) // This makes the header to disappear in true and appear in false
   useEffect(() => {
-
     const scrollAction = () => {
       scrollNow.current = window.scrollY;
       if(scrollNow.current > lastScroll.current){
@@ -22,8 +23,6 @@ function Header() {
       lastScroll.current = scrollNow.current;
     }
 
-
-
     window.addEventListener("scroll", scrollAction);
 
 
@@ -31,6 +30,9 @@ function Header() {
       window.removeEventListener("scroll", scrollAction);
     }
   },[])
+  // End
+
+
   return (
     <>
     <header style={{top: hideScroll ? "-100%" : "0"}}>

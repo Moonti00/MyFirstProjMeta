@@ -5,7 +5,8 @@ import iconSecTow from '../../public/icon/secTow.svg';
 import { Link } from 'react-router-dom';
 
 function SectionTow() {
-
+//  Array of foods
+//  Start
   const specials = [
     {
       id: 1, title: "Greek Salad",
@@ -26,6 +27,9 @@ function SectionTow() {
       img: lemonDessert
     }
   ];
+  //  End
+  //  map the food
+  // Start
 const specialItems = specials.map((item) => (
   <div key={item.id} className={"cardSecTow"}>
     <img src={item.img} alt={item.title} className='imgCardSecTow' />
@@ -52,7 +56,7 @@ const specialItems = specials.map((item) => (
     </div>
   </div>
 ));
-
+//  End
 return (
   <section className={"secTow"}>
     <div className={"titleSecTow"}>

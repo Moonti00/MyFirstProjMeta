@@ -4,7 +4,8 @@ import jimmy from '../../public/img/Per/personThree.png';
 import jessica from '../../public/img/Per/personTow.png';
 import star from '../../public/icon/star.png'
 function SectionThree() {
-
+//  Array of Users
+//  Start
   const sectionThree = [
     {
       name: 'Sarah Lopez',
@@ -31,11 +32,13 @@ function SectionThree() {
       description: "Best Feta Salad in town. Flawless every time!"
     }
   ]
-
+//  End
   return (
     <section className={"secThree"}>
       <h2>What do our customers think?</h2>
       <div className={"contSecThree"}>
+        {/* {map the All Users} */}
+        {/* {Start} */}
       {sectionThree.map((item, index) => (
         <div key={index} className={"cardSecThree"}>
           <div>
@@ -55,6 +58,7 @@ function SectionThree() {
           <p className="text-center">"{item.description}"</p>
         </div>
       ))}
+      {/* {End} */}
     </div>
     </section>
   )
